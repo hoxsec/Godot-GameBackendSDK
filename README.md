@@ -50,19 +50,28 @@
 
 ```bash
 cd your-godot-project
-git submodule add https://github.com/hoxsec/Godot-GameBackendSDK.git addons/GameBackendSDK
+git submodule add https://github.com/YOUR_USERNAME/GameBackendSDK.git addons/GameBackendSDK
 ```
 
 ---
 
 ## 🚀 Quick Start
 
+### Prerequisites
+
+1. Install this SDK (see [Installation](#-installation) above)
+2. Deploy or run the [Godot-GameBackendAPI](https://github.com/hoxsec/Godot-GameBackendAPI) backend server
+
+### Basic Usage
+
 ```gdscript
 extends Node
 
 func _ready() -> void:
-    # Initialize the SDK
-    var result := await Backend.init("https://api.yourgame.com", "your_project_id", {
+    # Initialize the SDK with your backend URL
+    # For local testing: "http://localhost:3000"
+    # For production: "https://api.yourgame.com"
+    var result := await Backend.init("http://localhost:3000", "your_project_id", {
         "timeout_sec": 10,
         "retries": 3,
         "debug": true  # Enable debug logging (disable in production)
@@ -88,6 +97,8 @@ func _ready() -> void:
     if result.ok:
         print("Your rank: ", result.data.rank)
 ```
+
+> 💡 **Tip**: To test locally, clone and run [Godot-GameBackendAPI](https://github.com/hoxsec/Godot-GameBackendAPI) first!
 
 ---
 
@@ -189,7 +200,7 @@ This SDK requires a backend that implements the REST API contract. Your backend 
 |--------|----------|-------------|
 | `GET` | `/v1/config` | Get remote config |
 
-**Need a backend?** Check out [GameBackendAPI](https://github.com/hoxsec/Godot-GameBackendAPI) - a reference implementation ready to deploy!
+**Need a backend?** Check out [GameBackendAPI](https://github.com/YOUR_USERNAME/GameBackendAPI) - a reference implementation ready to deploy!
 
 For complete endpoint specifications, see the [Backend Contract Documentation](addons/GameBackendSDK/README.md#backend-contract).
 
@@ -270,9 +281,18 @@ Tokens are automatically persisted to `user://game_backend_sdk.json` and survive
 
 This repository includes a demo scene to test all features:
 
-1. Open `addons/GameBackendSDK/demo/Demo.tscn` in Godot
-2. Set your backend URL
-3. Click "Initialize SDK" and test all features!
+1. Start the backend server ([Godot-GameBackendAPI](https://github.com/hoxsec/Godot-GameBackendAPI)):
+   ```bash
+   cd Godot-GameBackendAPI
+   bun install
+   bun dev
+   ```
+
+2. Open `addons/GameBackendSDK/demo/Demo.tscn` in Godot
+
+3. Set Base URL to `http://localhost:3000`
+
+4. Click "Initialize SDK" and test all features!
 
 ---
 
@@ -338,8 +358,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 💬 Support
 
 - 📖 [Full Documentation](addons/GameBackendSDK/README.md)
-- 🐛 [Report Issues](https://github.com/hoxsec/Godot-GameBackendSDK/issues)
-- 💡 [Request Features](https://github.com/hoxsec/Godot-GameBackendSDK/issues)
+- 🐛 [Report Issues](https://github.com/YOUR_USERNAME/GameBackendSDK/issues)
+- 💡 [Request Features](https://github.com/YOUR_USERNAME/GameBackendSDK/issues)
 
 ---
 
