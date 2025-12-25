@@ -50,7 +50,7 @@
 
 ```bash
 cd your-godot-project
-git submodule add https://github.com/YOUR_USERNAME/GameBackendSDK.git addons/GameBackendSDK
+git submodule add https://github.com/hoxsec/Godot-GameBackendSDK.git addons/GameBackendSDK
 ```
 
 ---
@@ -189,7 +189,7 @@ This SDK requires a backend that implements the REST API contract. Your backend 
 |--------|----------|-------------|
 | `GET` | `/v1/config` | Get remote config |
 
-**Need a backend?** Check out [GameBackendAPI](https://github.com/YOUR_USERNAME/GameBackendAPI) - a reference implementation ready to deploy!
+**Need a backend?** Check out [GameBackendAPI](https://github.com/hoxsec/Godot-GameBackendAPI) - a reference implementation ready to deploy!
 
 For complete endpoint specifications, see the [Backend Contract Documentation](addons/GameBackendSDK/README.md#backend-contract).
 
@@ -338,8 +338,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 💬 Support
 
 - 📖 [Full Documentation](addons/GameBackendSDK/README.md)
-- 🐛 [Report Issues](https://github.com/YOUR_USERNAME/GameBackendSDK/issues)
-- 💡 [Request Features](https://github.com/YOUR_USERNAME/GameBackendSDK/issues)
+- 🐛 [Report Issues](https://github.com/hoxsec/Godot-GameBackendSDK/issues)
+- 💡 [Request Features](https://github.com/hoxsec/Godot-GameBackendSDK/issues)
 
 ---
 
