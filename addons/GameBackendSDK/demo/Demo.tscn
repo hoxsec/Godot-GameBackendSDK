@@ -1,0 +1,316 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv8y6c5dcb7ox"]
+
+[ext_resource type="Script" path="res://addons/GameBackendSDK/demo/Demo.gd" id="1_demo"]
+
+[node name="Demo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_demo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "GameBackendSDK Demo"
+horizontal_alignment = 1
+
+[node name="StateLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "State: not initialized"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="InitSection" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InitSection"]
+layout_mode = 2
+text = "Initialization"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/InitSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InitSection/HBoxContainer"]
+layout_mode = 2
+text = "Base URL:"
+size_flags_horizontal = 3
+
+[node name="BaseUrlInput" type="LineEdit" parent="VBoxContainer/InitSection/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/InitSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InitSection/HBoxContainer2"]
+layout_mode = 2
+text = "Project ID:"
+size_flags_horizontal = 3
+
+[node name="ProjectIdInput" type="LineEdit" parent="VBoxContainer/InitSection/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InitButton" type="Button" parent="VBoxContainer/InitSection"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Initialize SDK"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AuthSection" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/AuthSection"]
+layout_mode = 2
+text = "Authentication"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/AuthSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/AuthSection/HBoxContainer"]
+layout_mode = 2
+text = "Email:"
+size_flags_horizontal = 3
+
+[node name="EmailInput" type="LineEdit" parent="VBoxContainer/AuthSection/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/AuthSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/AuthSection/HBoxContainer2"]
+layout_mode = 2
+text = "Password:"
+size_flags_horizontal = 3
+
+[node name="PasswordInput" type="LineEdit" parent="VBoxContainer/AuthSection/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+secret = true
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer/AuthSection"]
+layout_mode = 2
+
+[node name="GuestButton" type="Button" parent="VBoxContainer/AuthSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Guest Login"
+
+[node name="RegisterButton" type="Button" parent="VBoxContainer/AuthSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Register"
+
+[node name="LoginButton" type="Button" parent="VBoxContainer/AuthSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Login"
+
+[node name="RefreshButton" type="Button" parent="VBoxContainer/AuthSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Refresh"
+
+[node name="LogoutButton" type="Button" parent="VBoxContainer/AuthSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Logout"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="KVSection" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/KVSection"]
+layout_mode = 2
+text = "Cloud Key-Value"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/KVSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/KVSection/HBoxContainer"]
+layout_mode = 2
+text = "Key:"
+size_flags_horizontal = 3
+
+[node name="KVKeyInput" type="LineEdit" parent="VBoxContainer/KVSection/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/KVSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/KVSection/HBoxContainer2"]
+layout_mode = 2
+text = "Value (JSON):"
+size_flags_horizontal = 3
+
+[node name="KVValueInput" type="LineEdit" parent="VBoxContainer/KVSection/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer/KVSection"]
+layout_mode = 2
+
+[node name="KVSetButton" type="Button" parent="VBoxContainer/KVSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Set"
+
+[node name="KVGetButton" type="Button" parent="VBoxContainer/KVSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Get"
+
+[node name="KVDeleteButton" type="Button" parent="VBoxContainer/KVSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Delete"
+
+[node name="HSeparator4" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LeaderboardSection" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/LeaderboardSection"]
+layout_mode = 2
+text = "Leaderboards"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/LeaderboardSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/LeaderboardSection/HBoxContainer"]
+layout_mode = 2
+text = "Board:"
+size_flags_horizontal = 3
+
+[node name="LBBoardInput" type="LineEdit" parent="VBoxContainer/LeaderboardSection/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/LeaderboardSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/LeaderboardSection/HBoxContainer2"]
+layout_mode = 2
+text = "Score:"
+size_flags_horizontal = 3
+
+[node name="LBScoreInput" type="SpinBox" parent="VBoxContainer/LeaderboardSection/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 999999.0
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer/LeaderboardSection"]
+layout_mode = 2
+
+[node name="LBSubmitButton" type="Button" parent="VBoxContainer/LeaderboardSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Submit Score"
+
+[node name="LBTopButton" type="Button" parent="VBoxContainer/LeaderboardSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Get Top 20"
+
+[node name="LBMeButton" type="Button" parent="VBoxContainer/LeaderboardSection/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Get My Rank"
+
+[node name="HSeparator5" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ConfigSection" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ConfigSection"]
+layout_mode = 2
+text = "Remote Config"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ConfigSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ConfigSection/HBoxContainer"]
+layout_mode = 2
+text = "Platform:"
+size_flags_horizontal = 3
+
+[node name="ConfigPlatformInput" type="LineEdit" parent="VBoxContainer/ConfigSection/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ConfigSection"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ConfigSection/HBoxContainer2"]
+layout_mode = 2
+text = "App Version:"
+size_flags_horizontal = 3
+
+[node name="ConfigVersionInput" type="LineEdit" parent="VBoxContainer/ConfigSection/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ConfigButton" type="Button" parent="VBoxContainer/ConfigSection"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Fetch Config"
+
+[node name="HSeparator6" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Log Output"
+
+[node name="LogOutput" type="TextEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+editable = false
+wrap_mode = 1
+
